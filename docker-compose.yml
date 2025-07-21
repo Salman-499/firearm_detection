@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  firearm-detection:
+    build:
+      context: .
+      dockerfile: Dockerfile.firearm-detection
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - MODEL_PATH=/app/best.pt
+    restart: unless-stopped
+    networks:
+      - api-network
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - firearm-detection
+    restart: unless-stopped
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    driver: bridge 
