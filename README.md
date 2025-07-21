@@ -1,4 +1,4 @@
-# 🔫 Firearm Detection API
+# Firearm Detection API
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-API-green?logo=fastapi)](https://fastapi.tiangolo.com/) [![YOLOv8](https://img.shields.io/badge/YOLOv8-vision-orange?logo=github)](https://github.com/ultralytics/ultralytics) [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)](https://www.docker.com/)
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Key Features
+## Key Features
 - **Real-time detection** of firearms and persons in images and videos
 - **YOLOv8** deep learning model for high accuracy and speed
 - **FastAPI** backend with async endpoints and auto-generated docs
@@ -19,7 +19,7 @@
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 - **Model**: YOLOv8 (PyTorch, pre-trained and fine-tuned for firearm/person detection)
 - **Backend**: FastAPI (Python 3.9+)
 - **Deployment**: Docker Compose, Nginx (optional)
@@ -31,7 +31,7 @@
 
 ---
 
-## 📦 API Endpoints
+## API Endpoints
 - `GET /` — API info
 - `GET /health` — Health check
 - `POST /detect/image` — Detect objects in an image (returns JSON, optionally annotated image)
@@ -41,7 +41,7 @@
 
 ---
 
-## 💡 Example Use Cases
+## Example Use Cases
 - **Smart surveillance**: Real-time alerts for firearms in CCTV feeds
 - **Event security**: Screening at stadiums, concerts, or public gatherings
 - **Law enforcement**: Automated evidence review
@@ -49,7 +49,7 @@
 
 ---
 
-## 🏃‍♂️ Quickstart
+## Quickstart
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -69,7 +69,7 @@ docker-compose up --build
 
 ---
 
-## 📁 File Structure
+## File Structure
 ```
 firearm_detection/
 ├── api_service.py
@@ -83,11 +83,8 @@ firearm_detection/
 
 ---
 
-## 📈 Example Request
+## Example Request
 ```bash
 curl -X POST "http://localhost:8000/detect/image" -F "file=@test.jpg"
 ```
 
----
-
-> _Built for real-world impact. Designed for clarity. Ready for production._ 
